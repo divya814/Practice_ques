@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int lastOcc(int a[], int n,int i, int key){
+    if(i==n){
+        return -1;
+    }
+    // Filling all the elements in a stack named "rest" from bottom to top. eg. 2,4,5,7.....
+    int rest=lastOcc(a,n,i+1,key);
+    
+    // checking for i+1
+    if(rest!=-1){
+        return rest;  //return the last occurrence
+    }
+    
+    // checking for i if key is not in a[i+1]
+    if(a[i]==key){
+        return i+1;
+    }
+    return -1;
+}
+
+int main(){
+    int arr[]={2,4,5,7,87,1,9,2,62};
+    cout<<lastOcc(arr,sizeof(arr)/sizeof(int),0,2);
+}
