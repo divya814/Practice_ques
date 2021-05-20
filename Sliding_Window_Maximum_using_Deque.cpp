@@ -1,3 +1,5 @@
+// find maximum element in the sliding window of k size
+
 #include <bits/stdc++.h>
 using namespace std;
 
