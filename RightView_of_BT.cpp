@@ -1,4 +1,5 @@
 // Print Right View of a Binary Tree
+// A slighly better approach than Level Order Traversal
 
 #include <bits/stdc++.h>
 using namespace std;
